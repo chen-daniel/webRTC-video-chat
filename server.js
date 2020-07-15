@@ -1,6 +1,7 @@
 const express = require("express");
 const http = require("http");
 const app = express();
+app.get('/', (req, res) => res.send('Server is running!'))
 const server = http.createServer(app);
 const socket = require("socket.io");
 const io = socket(server);
@@ -35,7 +36,5 @@ io.on("connection", socket => {
         io.to(incoming.target).emit("ice-candidate", incoming.candidate);
     });
 });
-
-app.get('/', (req, res) => res.send('Server is running!'))
 
 server.listen(8000, () => console.log('server is running on port 8000'))
