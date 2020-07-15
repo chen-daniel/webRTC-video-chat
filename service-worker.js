@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/webRTC-video-chat/precache-manifest.12297ccfca6ff1f79026f46b815efcf5.js"
+  "/webRTC-video-chat/precache-manifest.4c814f10297c90096d0128d149d2b13a.js"
 );
 
 self.addEventListener('message', (event) => {
