@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/webRTC-video-chat/static/css/main.5f361e03.chunk.css",
+    "main.js": "/webRTC-video-chat/static/js/main.5ad61c37.chunk.js",
+    "main.js.map": "/webRTC-video-chat/static/js/main.5ad61c37.chunk.js.map",
+    "runtime-main.js": "/webRTC-video-chat/static/js/runtime-main.403e387f.js",
+    "runtime-main.js.map": "/webRTC-video-chat/static/js/runtime-main.403e387f.js.map",
+    "static/js/2.8bfa96d9.chunk.js": "/webRTC-video-chat/static/js/2.8bfa96d9.chunk.js",
+    "static/js/2.8bfa96d9.chunk.js.map": "/webRTC-video-chat/static/js/2.8bfa96d9.chunk.js.map",
+    "index.html": "/webRTC-video-chat/index.html",
+    "precache-manifest.12297ccfca6ff1f79026f46b815efcf5.js": "/webRTC-video-chat/precache-manifest.12297ccfca6ff1f79026f46b815efcf5.js",
+    "service-worker.js": "/webRTC-video-chat/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/webRTC-video-chat/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.8bfa96d9.chunk.js.LICENSE.txt": "/webRTC-video-chat/static/js/2.8bfa96d9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.403e387f.js",
+    "static/js/2.8bfa96d9.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.5ad61c37.chunk.js"
+  ]
+}
