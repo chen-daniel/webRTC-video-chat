@@ -1,0 +1,1 @@
+Simple peer-to-peer video chat app using the WebRTC standard.
