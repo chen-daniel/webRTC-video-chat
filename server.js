@@ -7,6 +7,8 @@ const io = socket(server);
 
 const rooms = {};
 
+io.origins('*:*');
+
 io.on("connection", socket => {
     socket.on("join room", roomID => {
         if (rooms[roomID]) {
@@ -33,5 +35,7 @@ io.on("connection", socket => {
         io.to(incoming.target).emit("ice-candidate", incoming.candidate);
     });
 });
+
+app.get('/', (req, res) => res.send('Server is running!'))
 
 server.listen(8000, () => console.log('server is running on port 8000'))
