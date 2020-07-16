@@ -12,7 +12,7 @@ io.origins('*:*');
 
 io.on("connection", socket => {
     socket.on("join room", roomID => {
-        if (rooms[roomID]) {
+        if (rooms[roomID] && rooms[roomID].length === 1) {
             rooms[roomID].push(socket.id);
         } else {
             rooms[roomID] = [socket.id];

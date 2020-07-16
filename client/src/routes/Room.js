@@ -8,6 +8,7 @@ const Room = (props) => {
     const socketRef = useRef();
     const otherUser = useRef();
     const userStream = useRef();
+    const senders = useRef([]);
 
     useEffect(() => {
         navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
@@ -77,7 +78,7 @@ const Room = (props) => {
         peerRef.current = createPeer();
         const desc = new RTCSessionDescription(incoming.sdp);
         peerRef.current.setRemoteDescription(desc).then(() => {
-            userStream.current.getTracks().forEach(track => peerRef.current.addTrack(track, userStream.current));
+            userStream.current.getTracks().forEach(track => senders.current.push(peerRef.current.addTrack(track, userStream.current)));
         }).then(() => {
             return peerRef.current.createAnswer();
         }).then(answer => {
@@ -118,10 +119,26 @@ const Room = (props) => {
         partnerVideo.current.srcObject = e.streams[0];
     }
 
+    function shareScreen() {
+        navigator.mediaDevices.getDisplayMedia({ cursor: true, 
+            audio: true,
+            video: true
+        }).then(stream => {
+            console.log(stream.getTracks());
+            console.log(stream.getAudioTracks());
+            const screenTrack = stream.getTracks()[0];
+            senders.current.find(sender => sender.track.kind === 'video').replaceTrack(screenTrack);
+            screenTrack.onended = function() {
+                senders.current.find(sender => sender.track.kind === "video").replaceTrack(userStream.current.getTracks()[1]);
+            }
+        });
+    }
+
     return (
         <div>
-            <video autoPlay ref={userVideo} muted={true}/>
-            <video autoPlay ref={partnerVideo} />
+            <video style={{width: "300px", height: "300px"}} autoPlay ref={userVideo} muted={true}/>
+            <button onClick={shareScreen}>Share screen</button>
+            <video controls autoPlay ref={partnerVideo} />
         </div>
     );
 };
