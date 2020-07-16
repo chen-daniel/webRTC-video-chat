@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d5d25bcaba5d7b8f53098e7c4313beea",
+    "revision": "3f033324d883ee9c1c026559f995da6e",
     "url": "/webRTC-video-chat/index.html"
   },
   {
-    "revision": "491e439d82fcd75bd9f2",
+    "revision": "a7a30ebe93e32f42a266",
     "url": "/webRTC-video-chat/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/webRTC-video-chat/static/js/2.8bfa96d9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "491e439d82fcd75bd9f2",
-    "url": "/webRTC-video-chat/static/js/main.beaa99f5.chunk.js"
+    "revision": "a7a30ebe93e32f42a266",
+    "url": "/webRTC-video-chat/static/js/main.9507c88e.chunk.js"
   },
   {
     "revision": "dd3671f9f44206b287cb",
